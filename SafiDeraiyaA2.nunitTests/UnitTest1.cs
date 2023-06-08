@@ -89,6 +89,98 @@ public class Tests
     }
 
 
+
+    // Five(5) tests for a valid scalene triangle
+
+
+    [Test]
+    public void AnalyzeTriangle_Input12and10and16_OutputValidScaleneTriangle()
+    {
+        //Arrange
+        int firstAngle = 12;
+        int secondAngle = 10;
+        int thirdAngle = 16;
+
+        string expected = "The triangle is valid and is a SCALENE";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    [Test]
+    public void AnalyzeTriangle_Input14and26and33_OutputValidScaleneTriangle()
+    {
+        //Arrange
+        int firstAngle = 14;
+        int secondAngle = 26;
+        int thirdAngle = 33;
+
+        string expected = "The triangle is valid and is a SCALENE";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    [Test]
+    public void AnalyzeTriangle_Input40and50and60_OutputValidScaleneTriangle()
+    {
+        //Arrange
+        int firstAngle = 40;
+        int secondAngle = 50;
+        int thirdAngle = 60;
+
+        string expected = "The triangle is valid and is a SCALENE";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    [Test]
+    public void AnalyzeTriangle_Input600and500and900_OutputValidScaleneTriangle()
+    {
+        //Arrange
+        int firstAngle = 600;
+        int secondAngle = 500;
+        int thirdAngle = 900;
+
+        string expected = "The triangle is valid and is a SCALENE";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void AnalyzeTriangle_Inpu7860and650and560_OutputValidScaleneTriangle()
+    {
+        //Arrange
+        int firstAngle = 786;
+        int secondAngle = 650;
+        int thirdAngle = 560;
+
+        string expected = "The triangle is valid and is a SCALENE";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
 }
 
 
