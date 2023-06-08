@@ -181,6 +181,118 @@ public class Tests
         Assert.AreEqual(expected, actual);
     }
 
+
+    // Three (3) tests for verifying a zero length for one or more sides
+
+    [Test]
+    public void AnalyzeTriangle_Input0and5and9_OutputVerifyZero()
+    {
+        //Arrange
+        int firstAngle = 0;
+        int secondAngle = 5;
+        int thirdAngle = 9;
+
+        string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    [Test]
+    public void AnalyzeTriangle_Input10and0and4_OutputVerifyZero()
+    {
+        //Arrange
+        int firstAngle = 10;
+        int secondAngle = 0;
+        int thirdAngle = 4;
+
+        string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void AnalyzeTriangle_Input15and30and0_OutputVerifyZero()
+    {
+        //Arrange
+        int firstAngle = 15;
+        int secondAngle = 30;
+        int thirdAngle = 0;
+
+        string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    // Three (3) tests for verifying an invalid response (other than a zero length)
+
+
+    [Test]
+    public void AnalyzeTriangle_Input20and10and10_OutputVerifyInvalidResponse()
+    {
+        //Arrange
+        int firstAngle = 20;
+        int secondAngle = 10;
+        int thirdAngle = 10;
+
+        string expected = "A triangle cannot be formed with those numbers";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    [Test]
+    public void AnalyzeTriangle_Input_9and_8and_5_OutputVerifyInvalidResponse()
+    {
+        //Arrange
+        int firstAngle = -9;
+        int secondAngle = -8;
+        int thirdAngle = -5;
+
+        string expected = "A triangle cannot be formed with those numbers";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+
+    [Test]
+    public void AnalyzeTriangle_Input3and10and5_OutputVerifyInvalidResponse()
+    {
+        //Arrange
+        int firstAngle = 3;
+        int secondAngle = 10;
+        int thirdAngle = 5;
+
+        string expected = "A triangle cannot be formed with those numbers";
+
+        //Act
+        string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
+
+        //Assert
+        Assert.AreEqual(expected, actual);
+    }
+
 }
 
 
